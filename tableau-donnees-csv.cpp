@@ -20,6 +20,13 @@ void afficheTableau(vector<vector<string>> tableau) {
 	
 }
 
+/** Construction d’un tableau 2D de cha^ınes lu depuis un fichier CSV
+* @param fichier le nom d’un fichier contenant un nombre fixe
+* d’entiers par lignes, séparés par des espaces
+* @param nb_colonnes le nombre de colonnes du fichier
+* @return un tableau d’entiers à deux dimensions
+**/
+
 vector<vector<string>> litTableauCSV(string nom_fichier, int nb_colonnes) {
 	//ifstream fichier(nom_fichier);
 	//char chara;
@@ -64,6 +71,12 @@ vector<vector<string>> litTableauCSV(string nom_fichier, int nb_colonnes) {
     return tableau;
 }
 
+/** Construction d’un tableau 2D de chaînes lu depuis un fichier CSV
+* @param fichier le nom d’un fichier contenant un nombre fixe
+* d’entiers par lignes, séparés par des espaces
+* @return un tableau d’entiers à deux dimensions
+**/
+
 vector<vector<string>> litTableauCSV(string nom_fichier) {//auteurs: les profs!
 	ifstream fichier(nom_fichier);
 	vector<vector<string>> tableau;
@@ -85,6 +98,12 @@ vector<vector<string>> litTableauCSV(string nom_fichier) {//auteurs: les profs!
     return tableau;
 }
 
+/** Extraction d’une colonne d’un tableau 2D de cha^ınes de caract`eres
+* @param t un tableau 2D de chaînes de caractères
+* @param i un numéro de colonne
+* @return la colonne i, représentée par un vecteur
+**/
+
 vector<string> colonne(vector<vector<string>> t, int i) {
     vector<string> tab (t.size());
 	for(int j = 0; j < t.size(); j ++){
@@ -92,6 +111,11 @@ vector<string> colonne(vector<vector<string>> t, int i) {
 	}
 	return tab;
 }
+
+/** Conversion d’un vecteur de chaînes de caractères en vecteur d’entiers
+* @param t un vecteur de chaînes de caractères
+* @return le vecteur, converti en vecteur d’entiers
+**/
 
 vector<int> conversionInt(vector<string> t) {
     vector<int> tab;
@@ -104,6 +128,11 @@ vector<int> conversionInt(vector<string> t) {
 	return tab;
 }
 
+/** Conversion d’un vecteur de chaînes de caractères en vecteur de doubles
+* @param t un vecteur de chaînes de caractères
+* @return le vecteur, converti en vecteur de doubles
+**/
+
 vector<double> conversionDouble(vector<string> t) {
     vector<double> tab;
 	tab = vector<double> (t.size());
@@ -114,7 +143,7 @@ vector<double> conversionDouble(vector<string> t) {
 	}
 	return tab;
 }
-
+//Ne fonctionne pas 
 template<class T>
 vector<T> conversion(vector<string> t) {
 	vector<T> tab;
