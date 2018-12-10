@@ -73,8 +73,8 @@ int somme(vector<int> t) {
 }
 
 /** copier la fonction moyenne déjà écrite **/
-float moyenne(vector<int> t) {
-    float moyenne = 0;
+int moyenne(vector<int> t) {
+    int moyenne = 0;
     for(int i=0;i< t.size(); i++){
 		moyenne = moyenne + t[i];
 	}

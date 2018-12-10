@@ -39,16 +39,18 @@ int main() {
 	vector<int> m;
 	m = colonne(t,mois);
 	int Somme = somme(m);
-	float Moyenne = moyenne(m);
+	int Moyenne = moyenne(m);
 	int arMax = t[indiceMax(m)][0] - 75000;
-	cout << "La somme de déchets pour ce mois est de : " << Somme << " tonnes." << endl;
-	cout << "La moyenne par arrondissement de déchets pour ce mois est de : " << Moyenne << " tonnes."<< endl;
+	cout << "La somme des déchets pour ce mois est de : " << Somme << " tonnes." << endl;
+	cout << "La moyenne par arrondissement des déchets pour ce mois est de : " << Moyenne << " tonnes."<< endl;
 	cout << "L'arrondissement le plus polluant est le " << arMax <<"ème arrondissement avec " << t[indiceMax(m)][mois] <<" tonnes de déchets." << endl;
+
+	cout << "----------------------------------" << endl;
 	vector<int> annuel = dechetsAnnuels(t);
 	int sommeAnnee = somme(annuel);
-	float moyenneAnnee = moyenne(annuel);	
+	int moyenneAnnee = moyenne(annuel);	
 	int arMaxAnnee = t[indiceMax(annuel)][0]-75000;
-	cout << "La somme de déchets pour cette année est de : " << sommeAnnee << " tonnes." << endl;
-	cout << "La moyenne par arrondissement de déchets pour cette année est de : " << moyenneAnnee << " tonnes."<< endl;
+	cout << "La somme des déchets pour cette année est de : " << sommeAnnee << " tonnes." << endl;
+	cout << "La moyenne par arrondissement des déchets pour cette année est de : " << moyenneAnnee << " tonnes."<< endl;
 	cout << "L'arrondissement le plus polluant est le " << arMaxAnnee <<"ème arrondissement avec " << annuel[indiceMax(annuel)] <<" tonnes de déchets." << endl;
 }
