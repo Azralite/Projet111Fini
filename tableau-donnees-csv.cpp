@@ -5,6 +5,11 @@
 #include <sstream>
 #include "tableau-donnees-csv.h"
 
+/**Affiche un tableau de string à deux dimensions
+* @param un tableau de string à deux dimensions
+* Affiche le tableau 
+**/ 
+
 void afficheTableau(vector<vector<string>> tableau) {    
 	for(int i = 0; i < tableau.size(); i ++){
 	for(int j =0 ; j < tableau[0].size(); j++){
