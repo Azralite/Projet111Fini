@@ -7,8 +7,9 @@
 using namespace std;
 
 int main(){
-	vector<vector<string>> tab = litTableauCSV("donnees/tonnages_des_dechets_bacs_jaunes.csv");
+	vector<vector<string>> tab = litTableauCSV("donnees/tonnages_des_dechets_bacs_jaunes.csv", 14);
 	afficheTableau(tab);	
+// Pour la ligne tout paris il y a un probleme avec les milliers et les centaines
 	vector<double> totalAr;
 	for(int j =0; j < tab.size(); j++){
 		vector<string> ligne_str;

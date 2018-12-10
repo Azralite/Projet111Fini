@@ -4,12 +4,6 @@
 #include "tableau-donnees.h"
 #include "tableau-donnees-csv.h"
 using namespace std;
-
-
-/** Renvoie l'indice de la valeur minimale du tableau
- * @param un tableau d'entiers
- * @return l'indice de la valeur min
-**/
 int indiceMin(vector<int> t){
 	int valeurMin = t[0];
 	int rangMin = 0;

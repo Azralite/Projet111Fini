@@ -107,19 +107,50 @@ int indiceMax(vector<int> t) {
 int main() {
 	int mois;
 	vector<vector<int>> t;
-    testLitTableauInt();
+   	testLitTableauInt();
 	testColonne();
 	cout << "Quel mois choisissez vous? (entre 1 et 12)" << endl;
 	cin >> mois;
+	if(mois < 1 || mois > 12){
+		throw invalid_argument("Le mois doit être compris entre 1 et 12!  🤐 ");
+	}
 	t = litTableauInt("donnees/tonnages_des_dechets_bacs_jaunes.txt",13);
 	vector<int> m;
 	m = colonne(t,mois);
+	string Mois;
+switch (mois){
+		case 1: Mois = "janvier";
+		break;
+		case 2: Mois = "fevrier";
+		break;
+		case 3: Mois = "mars";
+		break;
+		case 4: Mois = "avril";
+		break;
+		case 5: Mois = "mai";
+		break;
+		case 6: Mois = "juin";
+		break;
+		case 7: Mois = "juillet";
+		break;
+		case 8: Mois = "aout";
+		break;
+		case 9: Mois = "septembre";
+		break;
+		case 10: Mois = "octobre";
+		break;
+		case 11: Mois = "novembre";
+		break;
+		case 12: Mois = "décembre";
+		break; 
+		default : Mois = "ERREUR";
+	}
 	int Somme = somme(m);
 	float Moyenne = moyenne(m);
 	int arMax = t[indiceMax(m)][0] - 75000;
-	cout << "La somme de déchets pour ce mois est de : " << Somme << " tonnes." << endl;
-	cout << "La moyenne par arrondissement de déchets pour ce mois est de : " << Moyenne << " tonnes."<< endl;
-	cout << "L'arrondissement le plus polluant est le " << arMax <<"ème arrondissement avec " << t[indiceMax(m)][mois] <<" tonnes de déchets." << endl;
+	cout << "La somme de déchets en "<< Mois << " est de : " << Somme << " tonnes." << endl;
+	cout << "La moyenne par arrondissement de déchets en " << Mois << " est de : " << Moyenne << " tonnes."<< endl;
+	cout << "L'arrondissement le plus polluant est le " << arMax <<"ème arrondissement avec " << t[indiceMax(m)][mois] <<" tonnes de déchets." << endl; 
 	
 
 

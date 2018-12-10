@@ -19,7 +19,7 @@ int main() {
 	}
 	
 	moyenne = volTotal / nbTotalMois;
-	cout << moyenne << endl;
+	cout << "Le volume moyen d'eau distribué est de : " << moyenne <<" L" << endl;
 	volume.close();
 	
 }

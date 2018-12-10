@@ -46,7 +46,7 @@ int main() {
 	cout << "L'arrondissement le plus polluant est le " << arMax <<"ème arrondissement avec " << t[indiceMax(m)][mois] <<" tonnes de déchets." << endl;
 	vector<int> annuel = dechetsAnnuels(t);
 	int sommeAnnee = somme(annuel);
-	int moyenneAnnee = moyenne(annuel);	
+	float moyenneAnnee = moyenne(annuel);	
 	int arMaxAnnee = t[indiceMax(annuel)][0]-75000;
 	cout << "La somme de déchets pour cette année est de : " << sommeAnnee << " tonnes." << endl;
 	cout << "La moyenne par arrondissement de déchets pour cette année est de : " << moyenneAnnee << " tonnes."<< endl;

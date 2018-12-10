@@ -15,8 +15,36 @@ int main() {
 	vector<int> m = colonne(t, 1);
 	int volTotal = somme(m);
 	int moy = moyenne(m);
+	string mois;
 	int moisMax = t[indiceMax(m)][0];
-	cout << "Somme = " << volTotal << endl;
-	cout << "Moyenne = " << moy << endl;
-	cout << "Le mois max est " << moisMax << " avec " << t[indiceMax(m)][1] << endl;	
+	switch (moisMax){
+		case 1: mois = "janvier";
+		break;
+		case 2: mois = "fevrier";
+		break;
+		case 3: mois = "mars";
+		break;
+		case 4: mois = "avril";
+		break;
+		case 5: mois = "mai";
+		break;
+		case 6: mois = "juin";
+		break;
+		case 7: mois = "juillet";
+		break;
+		case 8: mois = "aout";
+		break;
+		case 9: mois = "septembre";
+		break;
+		case 10: mois = "octobre";
+		break;
+		case 11: mois = "novembre";
+		break;
+		case 12: mois = "décembre";
+		break; 
+		default : mois = "erreur";
+	}
+	cout << "Le volume d'eau total distribué est de : " << volTotal << " L" << endl;
+	cout << "Le volume moyen d'eau distribué est de : " << moy << " L" <<endl;
+	cout << "Le mois où l'on a distribué le plus d'eau est " << mois << " avec " << t[indiceMax(m)][1] << " L" << endl;	
 }

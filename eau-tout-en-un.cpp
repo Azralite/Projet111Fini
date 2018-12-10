@@ -47,7 +47,7 @@ void testLitTableauMois() {
  **/
 int somme(vector<int> t) {
 	int total = 0;
-    for(int i=0;i< t.size(); i++){
+	for(int i=0;i< t.size(); i++){
 		total = total + t[i];
 	}
 	return total;
@@ -130,34 +130,34 @@ int main() {
 	Moyenne = moyenne(tab);
 	moisMax = indiceMax(tab);
 	switch (moisMax){
-		case 0: mois = "Janvier";
+		case 0: mois = "janvier";
 		break;
-		case 1: mois = "Fevrier";
+		case 1: mois = "fevrier";
 		break;
-		case 2: mois = "Mars";
+		case 2: mois = "mars";
 		break;
-		case 3: mois = "Avril";
+		case 3: mois = "avril";
 		break;
-		case 4: mois = "Mai";
+		case 4: mois = "mai";
 		break;
-		case 5: mois = "Juin";
+		case 5: mois = "juin";
 		break;
-		case 6: mois = "Juillet";
+		case 6: mois = "juillet";
 		break;
-		case 7: mois = "Aout";
+		case 7: mois = "aout";
 		break;
-		case 8: mois = "Septembre";
+		case 8: mois = "septembre";
 		break;
-		case 9: mois = "Octobre";
+		case 9: mois = "octobre";
 		break;
-		case 10: mois = "Novembre";
+		case 10: mois = "novembre";
 		break;
-		case 11: mois = "Décembre";
+		case 11: mois = "décembre";
 		break; 
-		default : mois = "Erreur";
+		default : mois = "erreur";
 	}
-	cout << "Le volume total d'eau distribué dans l'année est de :" << Somme << "L" << endl;
-	cout << "Le volume moyen par mois d'eau distribué dans l'année est de :" << Moyenne << "L" << endl;
-	cout << "Le mois où l'on a distribué le plus d'eau est " << mois << " avec un volume de " << tab[moisMax] <<"L" << endl;
+	cout << "Le volume total d'eau distribué dans l'année est de : " << Somme << " L" << endl;
+	cout << "Le volume moyen par mois d'eau distribué dans l'année est de : " << Moyenne << " L" << endl;
+	cout << "Le mois où l'on a distribué le plus d'eau est " << mois << " avec un volume de " << tab[moisMax] <<" L" << endl;
 
 }

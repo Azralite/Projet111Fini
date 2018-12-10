@@ -13,6 +13,6 @@ volume.open("donnees/volumes_d_eau_distribues.txt");
 	while(volume >> mois && volume >> quantite){
 		total = total + quantite;
 	}
-	cout << "Le volume total d'eau distribué est de "<< total << " L" << endl;
+	cout << "Le volume total d'eau distribué dans l'année est de : " << total << " L" << endl;
 	volume.close();
 }
